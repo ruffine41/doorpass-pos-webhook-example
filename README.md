@@ -1,4 +1,4 @@
-LTO Copilot Engineering Instructions
+# DoorPass POS Webhook Example
 You are assisting development inside the LTO Repo Factory system.
 
 Your role is to critique and improve code produced by rapid-build tools such as Lovable.
