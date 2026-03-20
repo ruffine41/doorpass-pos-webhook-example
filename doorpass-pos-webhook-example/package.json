@@ -1,0 +1,17 @@
+{
+  "name": "doorpass-pos-webhook-example",
+  "version": "1.0.0",
+  "description": "Webhook-driven ticket generation example inspired by DoorPass Pro",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "uuid": "^10.0.0",
+    "qrcode": "^1.5.4"
+  },
+  "keywords": ["webhook", "ticketing", "pos", "qrcode", "doorpass"],
+  "license": "MIT"
+}
