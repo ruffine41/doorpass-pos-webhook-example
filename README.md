@@ -24,3 +24,17 @@ POS → Webhook → Ticket Generator → QR → Verification
 ```bash
 npm install
 node server.js
+
+## Endpoints
+
+POST /webhook/order
+
+Accepts a POS order payload and returns generated ticket data.
+
+GET /verify/:ticketId
+
+Returns a mock verification response for a ticket.
+
+Example Payload
+
+See examples/sample-payload.json
