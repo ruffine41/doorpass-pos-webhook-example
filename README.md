@@ -54,10 +54,11 @@ npm install
 npm start
 
 Server runs on:
-
 http://localhost:3000
 
-Why This Exists
+https://github.com/ruffine41/LTO-Repo-Factory
+
+##Why This Exists
 
 Modern event systems need:
 
@@ -108,3 +109,13 @@ This repository is part of the LTO standardized build system.
 
 Learn more:
 https://github.com/ruffine41/LTO-Repo-Factory
+
+## Purpose
+
+Provides a reusable pattern for protecting admin-level functionality in applications.
+
+---
+
+## Part of LTO Repo Factory
+
+This repository follows LTO Repo Factory standards for secure, modular development.
