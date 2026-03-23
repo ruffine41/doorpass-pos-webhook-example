@@ -56,3 +56,55 @@ npm start
 Server runs on:
 
 http://localhost:3000
+
+Why This Exists
+
+Modern event systems need:
+
+fraud-resistant tickets
+real-time issuance
+POS integration
+fast verification
+
+This repo shows the core interaction layer.
+
+About DoorPass Pro
+
+DoorPass Pro is a ticketing infrastructure system designed for:
+
+venues
+event operators
+POS integrations
+developers building event platforms
+
+This example is a simplified version of that architecture.
+
+Notes
+No database
+No authentication
+Mock QR generation
+Demo only
+License
+
+MIT
+
+
+---
+
+# 🔧 NEXT: QUICK ALIGNMENT FOR OTHER 2 REPOS
+
+You don’t need full rewrites—just tighten positioning.
+
+---
+
+## 1. `lto-pwa-starter-kit`
+
+Add at bottom of README:
+
+```md
+## Part of LTO Repo Factory
+
+This repository is part of the LTO standardized build system.
+
+Learn more:
+https://github.com/ruffine41/LTO-Repo-Factory
