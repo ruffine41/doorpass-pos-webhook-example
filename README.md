@@ -1,40 +1,58 @@
 # DoorPass POS Webhook Example
 
-Webhook-driven ticket generation powered by DoorPass Pro infrastructure.
+Minimal example of how a Point-of-Sale (POS) system can trigger ticket generation using a webhook.
 
-## Overview
+---
 
-This project demonstrates how a point-of-sale (POS) system can automatically generate event tickets after a purchase using a webhook-based architecture.
+## What This Demonstrates
 
-> This is a simplified example inspired by DoorPass Pro infrastructure.
+- POS system sends an order event
+- Webhook processes the order
+- Ticket is generated instantly
+- QR code is issued
+- Ticket can be verified
 
-## Flow
+---
 
-POS → Webhook → Ticket Generator → QR → Verification
+## Example Flow
 
-## Features
+1. POS completes a sale  
+2. Sends POST request to `/webhook/order`  
+3. Server generates ticket + QR  
+4. Client receives ticket response  
+5. Ticket verified via `/verify/:ticketId`  
 
-- Express webhook listener
-- Ticket ID generation with UUID
-- QR code creation
-- Mock verification endpoint
-
-## Setup
-
-```bash
-npm install
-node server.js
+---
 
 ## Endpoints
 
-POST /webhook/order
+### POST /webhook/order
 
-Accepts a POS order payload and returns generated ticket data.
+**Payload:**
+```json
+{
+  "orderId": "123",
+  "items": [{ "name": "Event Ticket", "quantity": 1 }],
+  "customer": { "email": "user@example.com" }
+}
+Response:
+{
+  "success": true,
 
+  "ticketId": "uuid",
+  "qrCode": "QR-uuid"
+}
 GET /verify/:ticketId
 
-Returns a mock verification response for a ticket.
+Returns:
+{
+  "valid": true,
+  "ticketId": "uuid"
+}
+Run Locally:
+npm install
+npm start
 
-Example Payload
+Server runs on:
 
-See examples/sample-payload.json
+http://localhost:3000
